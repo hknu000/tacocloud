@@ -80,6 +80,8 @@ public class DesignTacoController {
         if (errors.hasErrors()) {
             return "design";
         }
+
+        tacoOrder.addTaco(taco);
         model.addAttribute("taco", taco);
         return "redirect:/orders/current";
     }
