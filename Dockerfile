@@ -4,6 +4,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jre-alpine
-COPY --from=build /target/lec25.3-0.0.1-SNAPSHOT.jar taco.jar
+COPY --from=build /target/ch2502-0.0.1-SNAPSHOT.jar taco.jar
 EXPOSE 8085
 ENTRYPOINT ["java", "-jar", "taco.jar"]
